@@ -7,10 +7,14 @@ app = FastAPI()
 # فعال کردن CORS برای فرانت
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # فرانت
+    allow_origins=[
+        "http://localhost:3000",                # dev local
+        "https://stock-ml-seven.vercel.app"     # Vercel
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 app.include_router(symbols.router, prefix="/api")
 app.include_router(prices.router, prefix="/api")
