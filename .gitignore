@@ -1,0 +1,52 @@
+# ========== Python ==========
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+*.log
+*.pot
+*.pyc
+
+# مجازی‌سازی
+venv/
+.env/
+.venv/
+env/
+ENV/
+
+# ========== FastAPI ==========
+# پوشه‌های خاص دیتای موقتی
+*.pid
+*.seed
+*.json
+
+# ========== Node / React ==========
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log
+
+# Build خروجی
+/build
+/dist
+.next/
+out/
+
+# ========== VSCode & IDE ==========
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ========== OS ==========
+.DS_Store
+Thumbs.db
