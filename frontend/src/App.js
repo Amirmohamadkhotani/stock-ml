@@ -7,7 +7,7 @@ export default function App() {
   const [predictions, setPredictions] = useState(null); // اینجا کل response ذخیره میشه
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/symbols")
+    fetch("https://stock-ml-2.onrender.com/api/symbols")
       .then(res => res.json())
       .then(data => {
         const formatted = data.map(s => ({
@@ -20,7 +20,7 @@ export default function App() {
   }, []);
 
   const handleSubmit = ({ symbol, days, algorithm }) => {
-    fetch("http://127.0.0.1:8000/api/predict", {
+    fetch("https://stock-ml-2.onrender.com/api/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ symbol, days, algorithm })
