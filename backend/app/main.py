@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.app.api import symbols, prices, predict
+from app.api import symbols, prices, predict
 
 app = FastAPI()
 
